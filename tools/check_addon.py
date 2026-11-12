@@ -179,7 +179,7 @@ def main():
     all_reads, all_writes = {}, {}
     used_keys, all_strings = set(), set()
     for f in files:
-        path = os.path.join(ROOT, f)
+        path = os.path.join(ROOT, f.replace('\\', os.sep))
         text = open(path, encoding='utf-8').read()
         toks = tokenize(text, f)
         check_balance(toks, f)
