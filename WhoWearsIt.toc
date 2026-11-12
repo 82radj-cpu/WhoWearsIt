@@ -1,0 +1,31 @@
+## Interface: 16001
+## Title: Who Wears It
+## Notes: See which appearances you are missing and which of your characters can wear them.
+## Notes-esMX: Mira qué apariencias te faltan y cuál de tus personajes puede usarlas.
+## Notes-esES: Mira qué apariencias te faltan y cuál de tus personajes puede usarlas.
+## Author: ibol records
+## Version: @project-version@
+## Category: Collections
+## IconTexture: Interface\Icons\INV_Chest_Cloth_17
+## SavedVariables: WhoWearsItDB
+## SavedVariablesPerCharacter: WhoWearsItCharDB
+## AddonCompartmentFunc: WhoWearsIt_OnCompartmentClick
+## AddonCompartmentFuncOnEnter: WhoWearsIt_OnCompartmentEnter
+## AddonCompartmentFuncOnLeave: WhoWearsIt_OnCompartmentLeave
+## OptionalDeps: LibStub, LibDataBroker-1.1, LibDBIcon-1.0
+## X-License: MIT
+
+Locales\enUS.lua
+Locales\esMX.lua
+Locales\esES.lua
+Core.lua
+DB.lua
+Rules.lua
+Collection.lua
+Looks.lua
+UI\Preview.lua
+UI\WhoPanel.lua
+UI\MainFrame.lua
+UI\Minimap.lua
+Slash.lua
+SelfTest.lua

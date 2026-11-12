@@ -1,0 +1,18 @@
+name: Lint
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: "5.1"
+      - uses: leafo/gh-actions-luarocks@v4
+      - run: luarocks install luacheck
+      - run: luacheck .
+      - run: lua tests/rules_spec.lua
+      - run: lua tests/db_spec.lua
+      - run: python3 -I tools/check_addon.py

@@ -1,0 +1,51 @@
+local _, ns = ...
+
+-- Keys are readable English. A missing key returns the key itself, so English never breaks.
+local L = setmetatable({}, { __index = function(_, key) return key end })
+ns.L = L
+
+-- enUS keeps every value equal to its key; the table exists so tools can list all keys.
+ns.LOCALE_KEYS = {
+  "Who Wears It",
+  "Only missing",
+  "Usable by:",
+  "All characters",
+  "Search",
+  "Cloth", "Leather", "Mail", "Plate",
+  "Undress",
+  "Who can wear it",
+  "Add to look",
+  "Loading…",
+  "Collected %d of %d",
+  "Missing %d",
+  "Level %d",
+  "Does not use %s",
+  "Class only",
+  "Unknown",
+  "No characters yet. Log in with each of your characters once.",
+  "Select an appearance.",
+  "Fake data mode: %s",
+  "Log in with a character that wears %s to fill this list.",
+  "Commands:",
+  "/wwi - open or close the window",
+  "/wwi missing - open showing only missing appearances",
+  "/wwi roster - list your recorded characters",
+  "/wwi forget <name> - remove a character from the roster",
+  "/wwi minimap - show or hide the minimap button",
+  "/wwi selftest - run the diagnostics and save them",
+  "/wwi debug - toggle debug messages",
+  "/wwi help - this list",
+  "Recorded characters:",
+  "No character named %s.",
+  "Type /wwi forget %s again within 10 seconds to confirm.",
+  "Removed %s.",
+  "Minimap button: %s",
+  "Debug: %s",
+  "on", "off",
+  "Self-test: %d OK, %d FAIL. Saved; /reload writes it to disk.",
+  "Not in combat. Try again after the fight.",
+  "Left-click: open or close",
+  "New look",
+  "%d of %d",
+  "Strategy: %s",
+}

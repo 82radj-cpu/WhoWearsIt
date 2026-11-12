@@ -1,0 +1,20 @@
+package-as: WhoWearsIt
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+# 0.1 bundles no libraries (LibDataBroker-1.1 has no declared license; see docs/API-NOTES.md).
+# Uncomment after Juan decides, and add the four Libs\ lines back to WhoWearsIt.toc.
+# externals:
+#   Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+#   Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+#   Libs/LibDataBroker-1.1: https://github.com/tekkub/libdatabroker-1-1
+#   Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
+
+ignore:
+  - tools
+  - tests
+  - docs
+  - .luacheckrc
+  - README.md
