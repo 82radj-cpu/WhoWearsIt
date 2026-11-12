@@ -1,6 +1,9 @@
 std = "lua51"
-max_line_length = 120
-exclude_files = { "Libs/", "tools/", ".github/" }
+max_line_length = 130
+-- Methods declared with ':' often do not use self; that is fine.
+self = false
+-- .lua/ and .luarocks/ are created in the workspace by the CI Lua setup actions.
+exclude_files = { "Libs/", "tools/", ".github/", ".lua/", ".luarocks/", ".install/" }
 -- Locale files are long tables of strings.
 files["Locales/"] = { max_line_length = false }
 -- Tests run outside the game and set the SavedVariables globals themselves.
